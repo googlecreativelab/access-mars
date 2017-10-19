@@ -1,0 +1,67 @@
+@font-face {
+    font-family: NowAlt-Regular;
+    src: url('../fonts/NowAlt-Regular.otf');
+}
+
+.invisible, .hidden {
+	visibility: hidden;
+}
+
+canvas {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	/*cursor: none;*/
+}
+
+#intro-video-webm {
+	z-index: 2;
+}
+#intro-video-mp4 {
+	z-index: 2;
+}
+
+.scene-intro-labels {
+	display: none;
+}
+
+#skip-intro {
+	z-index: 2;
+	margin: 20px;
+	position: absolute;
+	bottom: 0;
+
+	font-family: "NowAlt-Regular";
+	letter-spacing: 2px;
+	font-size: 12px;
+	font-weight: 100;
+	color: white;
+	cursor: pointer;
+
+	border-bottom: 1px solid #FFF;
+    text-decoration: none;
+}
+
+.a-enter-vr {
+	z-index: 2;
+	width: 50px !important;
+}
+
+.a-enter-vr-button {
+	background: url("data:image/svg+xml;charset=UTF-8,%3csvg enable-background='new 0 0 50 28' version='1.1' viewBox='0 0 50 28' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m43.114 2.843c-0.953-0.951-2.218-1.84-3.564-1.84h-29.117c-1.347 0-2.612 0.89-3.564 1.84-0.952 0.951-1.476 2.4-1.476 3.746l1e-3 15.12c0 1.347 0.524 2.74 1.475 3.691 0.952 0.953 2.216 1.603 3.563 1.603h6.992c0.912 0 1.807-0.328 2.589-0.797 0.781-0.47 1.422-1.182 1.853-1.984l1.971-3.745c0.232-0.431 0.661-0.753 1.148-0.753h0.011c0.487 0 0.917 0.303 1.149 0.73l1.971 3.705c0.431 0.803 1.07 1.567 1.853 2.035s1.678 0.809 2.588 0.809h6.992c1.347 0 2.611-0.605 3.564-1.558 0.949-0.952 1.474-2.259 1.474-3.605l3e-3 -15.23c1e-3 -1.347-0.525-2.816-1.476-3.767m-27.045 15.405c-2.186 0-3.963-1.776-3.963-3.961s1.778-3.961 3.963-3.961c2.183 0 3.96 1.777 3.96 3.961 0 2.185-1.777 3.961-3.96 3.961m17.843 0c-2.183 0-3.959-1.776-3.959-3.961s1.776-3.961 3.959-3.961c2.187 0 3.965 1.777 3.965 3.961 0 2.185-1.778 3.961-3.965 3.961' fill='%23fff'/%3e%3c/svg%3e ") no-repeat !important;
+	border: 0;
+    bottom: 0;
+    cursor: pointer;
+    width: 50px !important;
+    height: 28px !important;
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+}
+
+.pointer {
+	cursor: pointer !important;
+}
+
+.a-canvas.a-grab-cursor:hover{cursor:inherit !important}
+/*.a-canvas.a-grab-cursor:active,.a-grabbing{cursor:inherit !important}*/

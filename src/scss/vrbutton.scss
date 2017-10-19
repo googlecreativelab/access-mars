@@ -1,0 +1,118 @@
+$tabletWidth: 800px;
+$phoneWidth: 500px;
+$landscapeHeight: 420px;
+$enterVRWidth : 170px;
+$enterVRHeight : 46px;
+
+#enterVR {
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 300px;
+
+	#enter360 {
+		text-align: center;
+		text-decoration: underline;
+		color: #846852;
+		margin-top: 20px;
+		cursor: pointer;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+#enter-vr-container {
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	min-width: $enterVRWidth;
+	min-height: $enterVRHeight;
+	background: none;
+	text-align: center;
+
+	.mode360 {
+
+		$height: 25px;
+		left: 10px;
+
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		font-size: 15px;
+		font-weight: 100;
+		font-family: "NowAlt-Medium";
+
+		* {
+			float: left;
+		}
+
+		img {
+			margin-right: 5px;
+			height: $height;
+		}
+
+		span {
+			height: $height;
+			line-height: 30px;
+		}
+	}
+
+	.webvr-ui-title {
+		position: relative;
+		top: 1.0px;
+		margin: 0 0 0 0;
+		letter-spacing: 0.2em;
+		line-height: 15px;
+		font-size: 15px;
+		font-weight: 100;
+		font-family: "NowAlt-Medium";
+		text-transform: uppercase;
+	}
+
+	.webvr-ui-button {
+
+		.svg360 {
+			width: 24px;
+			height: 24px;
+			margin-right: 10px;
+		}
+
+		&:hover  {
+			background-color: #846852;
+		}
+
+		&:hover .webvr-ui-title {
+			color: #e2ceb5;
+		}
+
+		&:hover .webvr-ui-svg {
+			fill: #e2ceb5;
+		}
+		&:hover .webvr-ui-svg-error {
+			fill: #e2ceb5;
+		}
+
+		&:hover .svg360 .icon360 {
+			fill: #e2ceb5;
+		}
+
+	}
+
+	#try-it-in-360 {
+		letter-spacing: 0.075em;
+		margin-top: 15px;
+		color: #846852;
+		text-transform: uppercase;
+
+		padding-bottom: 2px;
+		border-bottom: 1px solid #846852;
+		font-family: "NowAlt-Regular";
+		font-size: 15px;
+		text-decoration: none;
+	}
+
+}

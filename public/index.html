@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Access Mars: Curiosity">
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <!-- Facebook Share -->
+        <meta property="og:url" content="https://accessmars.withgoogle.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Access Mars: A WebVR Experiment" />
+        <meta property="og:description" content="NASA, JPL, and Google bring the real surface of Mars to your browser." />
+        <meta property="og:image" content="https://accessmars.withgoogle.com/img/fbshare.jpg" />
+
+        <!-- Twitter Share -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Access Mars: A WebVR Experiment">
+        <meta name="twitter:description" content="NASA, JPL, and Google bring the real surface of Mars to your browser.">
+        <meta name="twitter:image" content="https://accessmars.withgoogle.com/img/twshare.jpg">
+
+        <title>Access Mars: A WebVR Experiment</title>
+        <link rel="stylesheet" type="text/css" href="css/vr.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100" rel="stylesheet">
+
+		<!-- Origin Trial Token, feature = WebVR (For Chrome M59+), origin = https://accessmars.withgoogle.com, expires = 2017-11-14 -->
+		<meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M59+)" data-expires="2017-11-14" content="Apl/4s/riQR+1zxX3m0HhiLIyq29CQ/HbIuL9IPNLLjJ3BA4on7oGk3tVEoyes4vqcuNldcqSumKqLnu/JcZJw8AAABbeyJvcmlnaW4iOiJodHRwczovL2FjY2Vzc21hcnMud2l0aGdvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IldlYlZSMS4xIiwiZXhwaXJ5IjoxNTEwNjE3NjAwfQ==">
+
+		<!-- Origin Trial Token, feature = WebVR (For Chrome M62+), origin = https://accessmars.withgoogle.com, expires = 2017-11-30 -->
+		<meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M62+)" data-expires="2017-11-30" content="AtOyQC/Q9vMVifOv6sPAznsVAOiMNaPddmjl7qMKqex6YleqlyICrXg14aw0jESt1Efa5XVhFMlaLovMe7vxZQUAAABeeyJvcmlnaW4iOiJodHRwczovL2FjY2Vzc21hcnMud2l0aGdvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IldlYlZSMS4xTTYyIiwiZXhwaXJ5IjoxNTEyMDAyNjI0fQ==">
+
+        <script src="js/ga.js"></script>
+        <script src="js/fallback.js"></script>
+        <script src="js/splash.js"></script>
+		<script src="js/vr.js"></script>
+    </head>
+
+    <body>
+
+		<div class="splash">
+			<header>
+				<span class="headerImage">
+					<img class="headerPart" src="img/splash/title-access.png">
+					<img class="headerPart" src="img/splash/title-mars.png">
+				</span>
+				<h3 class="headers">
+					<span>The real surface of Mars. Recorded by</span>
+					<span>NASA's Curiosity rover. Now in your browser.</span>
+				</h3>
+				<div id="enter-vr-container" style="color: #ffffff">
+				<br>
+				<a id="try-it-in-360" style="display: none;" href="javascript:void(0);">try it in 360</a>
+			</div>
+			</header>
+		</div>
+
+		<div class="footer">
+			<div class="gradient left"></div>
+			<div class="gradient right"></div>
+			<a href="#" class="about-btn">About</a>
+			<div class="terms">
+				<a href="https://www.google.com/intl/en/policies/privacy/" target="_blank">Privacy</a> &amp;&nbsp;<a href="https://www.google.com/intl/en/policies/terms/" target="_blank">Terms</a>
+			</div>
+			<ul class="credits">
+				<li><a href="https://webvrexperiments.com/" target="_blank"><img src="img/splash/webvr-experiment.png"></a></li>
+				<li><img src="img/splash/line.png"></li>
+				<li><img src="img/splash/google-friends.png"></li>
+				<li><img src="img/splash/line.png"></li>
+                <li><a href="https://mars.nasa.gov/" target="_blank"><img src="img/splash/nasa.png"></a></li>
+			</ul>
+		</div>
+
+		<div class="about">
+			<article>
+				<div class="close"></div>
+
+				<div class="experimentHeader">
+					<h2>About<br>the<br>experiment</h2>
+					<div class="squiggleTint"></div>
+					<p class="custom-text-width">Access Mars lets you explore a 3D replica of the Martian surface, exactly as it was recorded by the Curiosity rover. As Curiosity has travelled across Mars, it’s taken digital photographs with two stereoscopic camera systems. By combining and analyzing these photographs, scientists at NASA JPL have created a 3D model used to study Mars and plan future experiments. For the first time, this same 3D model is now available here for anyone to explore in their browser using WebVR.</p>
+				</div>
+
+				<div class="terrain">
+					<h2>Mapping<br>the<br>terrain</h2>
+					<div class="clearfix">
+						<div class="column right content">
+							<h4>Step 01</h4>
+							<div class="squiggleGrey"></div>
+							<p>Image mosaics are captured with the left and right Navcam and Mastcam.</p>
+						</div>
+						<img class="column right image" src="img/splash/about/mapping_01.jpg">
+					</div>
+
+					<div class="clearfix"/>
+						<div class="column left content">
+							<h4>Step 02</h4>
+							<div class="squiggleGrey"></div>
+							<p>The two mosaics are then combined together to create a stereo match.</p>
+						</div>
+						<img class="column left image" src="img/splash/about/mapping_02.jpg">
+					</div>
+
+					<div class="clearfix">
+						<div class="column right content">
+							<h4>Step 03</h4>
+							<div class="squiggleGrey"></div>
+							<p>Using the data from the stereo match scientists are able to extract 3D mapping data.</p>
+						</div>
+						<img class="column right image" src="img/splash/about/mapping_03.jpg">
+					</div>
+
+					<div class="clearfix"/>
+						<div class="column left content">
+							<h4>Step 04</h4>
+							<div class="squiggleGrey"></div>
+							<p>Using metadata from the time, location, and direction the images were taken, scientists can tile the terrain data into a composite piece of terrain.</p>
+						</div>
+						<img class="column left image" src="img/splash/about/mapping_04.jpg">
+					</div>
+				</div>
+
+				<div class="aboutKatieHeader clearfix">
+					<div class="column left katie-content">
+						<h2>Introducing<br>Katie Stack<br>Morgan</h2>
+						<div class="squiggleTint"></div>
+						<p>As you explore the surface of Mars, you’ll learn about key points of interest from Katie Stack Morgan of NASA’s JPL. Since 2012, Katie has been working as a planetary geologist on the Mars Science Laboratory mission, analyzing Curiosity’s discoveries and planning future parts of the mission. Her primary focus is studying the geology of ancient Mars to learn what the planet may have been like in the past, and if it might have supported life.</p>
+					</div>
+					<img class="column left katie-image" src="img/splash/about/katie.jpg">
+				</div>
+
+				<div class="codeHeader">
+					<h2>Learn More</h2>
+					<div class="squiggleTint"></div>
+					<p class="custom-text-width-code">
+						Take a look at the code on <a href="http://github.com/googlecreativelab/access-mars" target="_blank">GitHub</a>.
+						Check out more <a href="https://webvrexperiments.com/" target="_blank">WebVR Experiments</a>.
+						Get the latest on Mars from <a href="https://mars.nasa.gov/" target="_blank">NASA</a>.
+					</p>
+				</div>
+
+			</article>
+		</div>
+
+        <ul class="scene-intro-labels">
+            <li data-site="landing_site">
+                01; Landing Site; Photographed by Curiosity; Aug 7, 2012 - Aug 26, 2012
+            </li>
+            <li data-site="pahrump_hills">
+                02; Pahrump Hills; Photographed by Curiosity; Feb 17, 2015 - Mar 11, 2015
+            </li>
+            <li data-site="marias_pass">
+                03; Marias Pass; Photographed by Curiosity; May 22, 2015 - Aug 6, 2015
+            </li>
+			<li data-site="murray_buttes">
+                04; Murray Buttes; Photographed by Curiosity; Sep 1, 2016 - Sep 4, 2016
+            </li>
+			<li data-site="live_site">
+                05; Current Location; Photographed by Curiosity; October 3rd, 2017
+            </li>
+        </ul>
+
+        <video id="intro-video-webm" src="intro/intro.webm" playsinline style="display:block; z-index: 0; position:absolute;"></video>
+        <video id="intro-video-mp4" src="intro/intro.mp4" playsinline style="display:block; z-index: 0; position:absolute;"></video>
+
+        <div id="skip-intro">SKIP INTRO</div>
+
+        <a-scene id="scene" vr-mode-ui="enabled: false" fog="type: exponential; color: #e1cbb2; density: 0.01">
+
+            <a-entity id="player">
+
+                <a-camera id="camera" wasd-controls="fly: true" frustum>
+
+                    <a-entity id="mouse-touch-controller" better-raycaster="objects: .clickable; useCursor: true; controllerType: mouse-touch"></a-entity>
+                    <a-entity id="arc-dummy" position="-0.1 0 -0.25"></a-entity>
+                    <a-entity id="ui-dummy" position="0 0 -1.75"></a-entity>
+                    <a-entity id="ui-dummy-far" position="0 0 -6"></a-entity>
+                    <a-entity id="fader" fade-to-black></a-entity>
+
+                    <a-entity id="scene-label-intro" scene-intro-label scale="0.03 0.03 0.03" position="0, 0, -1">
+                        <a-entity class="progress-bg" geometry="primitive: plane; height: 0.4; width: 32" position="0 -3.5 0" material="shader: flat; color: white;"></a-entity>
+                        <a-entity class="progress" geometry="primitive: plane; height: 0.4; width: 32" scale="1 1 1" position="0 -3.5 0.0001" material="shader: flat; color: #133754;"></a-entity>
+                    </a-entity>
+
+                </a-camera>
+
+                <a-entity id="right-hand" shader='flat' better-raycaster="objects: .clickable; controllerType: controller" visible="false">
+                    <a-entity id="controller-ray" controller-ray></a-entity>
+                </a-entity>
+
+            </a-entity>
+
+            <a-entity id="boundary-sphere" class="clickable" boundary-sphere></a-entity>
+
+            <a-entity id="markers"  visible="false" class="invisible">
+
+                <a-entity id="landing_site_markers" visible="false">
+                    <a-entity id="ls1" position="21 0 0" poi-marker="vo: ls3; img: cards/ls1.jpg; title: SATELLITE VIEW; ">This photo taken from the Mars Reconnaissance Orbiter shows the landing site where you&#39;re standing now. It also shows where other parts of the landing system ended up, like the rocket-powered descent stage and the parachute.</a-entity>
+                    <a-entity id="ls2" position="14 0 6" poi-marker="vo: ls2; img: cards/ls2.jpg; title: IS THIS TERRAIN REAL?;">All the terrain around you has been created using real data and images from Curiosity. By taking photos with two side-by-side cameras we can reconstruct the terrain in 3D.</a-entity>
+                    <a-entity id="ls3" position="-9 0 4" poi-marker="vo: ls1; img: cards/ls3.jpg; title: BLACK AND WHITE TILES;">Some areas are black and white because they were only photographed by Curiosity&#39;s lower resolution navigation cameras. Frequently, Curiosity has to move on before it can photograph everything with its higher resolution Mastcams.</a-entity>
+                </a-entity>
+
+                <a-entity id="murray_buttes_markers" visible="false">
+                    <a-entity position="13.8 1.2 6.9" poi-marker="vo: mb1; img: cards/mb1.jpg; title: BUTTES;">These are the Murray Buttes. Buttes are steep, knob-like rock formations. The largest one here is about as tall as a three-story building. These buttes served as Curiosity&#39;s entryway to its main destination: Mount Sharp. </a-entity>
+                    <a-entity position="-10.56 1.80 -12.90" poi-marker="vo: mb2; img: cards/mb2.jpg; title: BRUCE MURRAY;">The Murray Buttes are named after the late Bruce Murray, a Caltech planetary scientist and director of NASA&#39;s Jet Propulsion Laboratory. He worked on NASA&#39;s first missions to Mars and laid the groundwork for future Mars exploration.</a-entity>
+                    <a-entity position="21 6.2 3.7" poi-marker="vo: mb3; img: cards/mb3.jpg; title: MONUMENT VALLEY; ">These buttes are similar to ones you&#39;d find on Earth, formed when wind erodes ancient sandstone. Scientists have compared the region to Monument Valley.</a-entity>
+                    <a-entity position="-63.5 -3.9 35.2" poi-marker="vo: mb4; img: cards/mb4.jpg; title: INTERFERENCE;">The buttes are beautiful, but are sometimes tall enough to block the signal between Curiosity and the Mars orbiters that fly overhead. That can temporarily reduce the amount of data that Curiosity can send back to Earth.</a-entity>
+                </a-entity>
+
+                <a-entity id="pahrump_hills_markers" visible="false">
+                    <a-entity position="1.9 1.0 -3.9" poi-marker="size: 0.01; vo: ph1; img: cards/ph1.jpg; title: ARRIVAL; ">Curiosity arrived in Pahrump Hills in September 2014. It began conducting a walkabout of the area, the same way geologists on Earth do field work. It surveyed the area, then scientists chose which sites to examine more closely.</a-entity>
+                    <a-entity position="2.8 2.5 -7.3" poi-marker="size: 0.01; vo: ph2; img: cards/ph2.jpg; title: ANCIENT HISTORY;">Sedimentary rocks in this area appear to have formed in the presence of water. Scientists think this could have been the bottom of a lake, billions of years ago.</a-entity>
+                    <a-entity position="6.98 1.13 -5.61" poi-marker="size: 0.01; vo: ph3; img: cards/ph3.jpg; title: DRILL SITE;">Curiosity analyzed several samples in this area using its drill and instruments. Minerals found here suggest that the chemistry of this lake was changing. This suggests that environments on Mars capable of supporting life varied over time.</a-entity>
+                    <a-entity position="-28.9 4.3 -10.7" poi-marker="vo: ph4; img: cards/ph4.jpg; title: MOUNT SHARP;">Pahrump Hills is at the base of Mount Sharp, a major objective for Curiosity. From orbit, we have seen layers of minerals reaching from the floor of Gale Crater to the foot hills of Mount Sharp. By climbing up the slope, layer by layer, Curiousity can reveal clues about the history of Mars, and its potential ability to support life.</a-entity>
+                </a-entity>
+
+                <a-entity id="marias_pass_markers" visible="false">
+                    <a-entity position="8.85 -0.65 5.60" poi-marker="size: 0.015; vo: mp1; img: cards/mp1.jpg; title: ARRIVAL;">Curiosity arrived in Marias Pass on May 20, 2015. Here, a younger layer of sandstone sits atop an older layer of mudstone, potentially preserving clues about ancient changes in the Martian environment.</a-entity>
+                    <a-entity position="6.1 -0.3 22" poi-marker="size: 0.02; vo: mp2; img: cards/mp2.jpg; title: BUCKSKIN;">This target is named &#34;Buckskin.&#34; A sample drilled here showed high levels of silica, which could be promising for preserving organic material. It also showed traces of the mineral tridymite, which was left behind by volcanic activity.</a-entity>
+                    <a-entity position="10.8 -0.4 19.4" poi-marker="size: 0.02; vo: mp3; img: cards/mp3.jpg; title: SELFIE;">Curiosity took this selfie here in August 2015.  Observations like this are used to monitor dust deposits, wear on the rover&#39;s wheels, and other signs of aging.</a-entity>
+                    <a-entity position="2.16 -1.17 4.88" poi-marker="size: 0.02; vo: mp4; img: cards/mp4.jpg; title: CONJUNCTION;">Curiosity spent all of June 2015 parked in this spot, because Mars and Earth were on opposite sides of the Sun. When this &#39;conjunction&#39; happens, radio signals between Mars and Earth become unreliable, so commands aren&#39;t sent to Curiosity.</a-entity>
+                </a-entity>
+
+            </a-entity>
+
+            <a-entity id="horizMarkers" visible="false">
+
+                <a-entity id="landing_site_horizMarkers" visible="false">
+                    <a-entity horizon-marker="azimuth: 130; elevation: -3;"></a-entity>
+                </a-entity>
+
+                <a-entity id="murray_buttes_horizMarkers" visible="false">
+                    <a-entity horizon-marker="azimuth: 130; elevation: 10;"></a-entity>
+                </a-entity>
+
+                <a-entity id="pahrump_hills_horizMarkers" visible="false">
+                    <a-entity horizon-marker="azimuth: 130; elevation: 20;"></a-entity>
+                </a-entity>
+
+                <a-entity id="marias_pass_horizMarkers" visible="false">
+                    <a-entity horizon-marker="azimuth: 130; elevation: 10;"></a-entity>
+                </a-entity>
+
+                <a-entity id="live_site_horizMarkers" visible="false">
+                    <a-entity horizon-marker="azimuth: 130; elevation: 20;"></a-entity>
+                </a-entity>
+
+            </a-entity>
+
+            <a-entity id="rover-markers" class="invisible">
+
+                <a-entity id="rover_poi_arm" rover-poi="title: Robotic Arm; target: arm; img: cards/rm4.jpg; vo: rover1;">Curiosity&#39;s robotic arm contains various instruments to measure rock and soil composition, brush dust away from rocks, take imagery, and even drill into rocks.</a-entity>
+
+                <a-entity id="rover_poi_mast" rover-poi="title: Remote Sensing Mast; target: mast; img: cards/rm1.jpg; vo: rover2;">There are seven different cameras on Curiosity&#39;s mast: two pairs of black and white navigation cameras; two color Mastcams; and &#34;ChemCam,&#34; which uses a powerful laser to vaporize small pieces of rock from up to 7 meters away. ChemCam captures and analyzes the flash of that vaporization to measure the rock&#39;s chemical makeup.</a-entity>
+
+                <a-entity id="rover_poi_analysis" rover-poi="title: Analytical System; target: chassis; channel: b; img: cards/rm2.jpg; vo: rover3;">Curiosity&#39;s two large analytical instruments inside its chassis can analyze rock, soil, and atmosphere samples. These measurements help unlock the history of Mars, revealing that Mars would have been habitable in the ancient past, and also had the basic ingredients for life.</a-entity>
+
+                <a-entity id="rover_poi_rtg" rover-poi="title: RTG; target: chassis; channel: g; img: cards/rm3.jpg; vo: rover4;">At the back of Curiosity is its power source, a Radioisotope Thermoelectric Generator - or RTG - that converts the heat created by a small amount of plutonium into electricity.</a-entity>
+
+                <a-entity id="rover_poi_uhf" rover-poi="title: UHF Antenna; target: chassis; channel: r; img: cards/rm5.jpg; vo: rover5;">Curiosity&#39;s UHF antenna sends large amounts of data to satellites orbiting Mars, which then send the data to Earth. In a typical day, Curiosity will return around 50 megabytes of data.</a-entity>
+
+                <a-entity id="rover_poi_suspension" rover-poi="title: Mobility System; target: suspension; img: cards/rm6.jpg; vo: rover6;">Curiosity&#39;s wheels are twice the size of wheels on previous rovers, helping it handle rougher terrain. On flat ground, Curiosity has a top speed of four centimeters per second.</a-entity>
+
+            </a-entity>
+
+            <a-entity id="sky" sky-gradient></a-entity>
+
+            <a-entity id="terrain-container"></a-entity>
+
+            <a-entity id="map-card" map-card visible="false">
+                <a-entity id="map-card-offset">
+
+                    <a-entity id="back-meshes"></a-entity>
+
+                    <a-entity id="map-markers">
+                        <a-entity map-marker="index: 1; site: landing_site" position="0.65 0.225 0"></a-entity>
+                        <a-entity map-marker="index: 2; site: pahrump_hills" position="-0.27 0.047 0"></a-entity>
+                        <a-entity map-marker="index: 3; site: marias_pass" position="-0.42 0.005 0"></a-entity>
+                        <a-entity map-marker="index: 4; site: murray_buttes" position="-0.66 -0.055 0"></a-entity>
+                    </a-entity>
+
+                    <a-entity id="map-site-cards">
+                        <a-entity id="map-landing_site"  map-site-card="index: 1; title: Landing Site; site: landing_site; distance: 0km"></a-entity>
+                        <a-entity id="map-pahrump_hills" map-site-card="index: 2; title: Pahrump Hills; site: pahrump_hills; distance: 9.7km"></a-entity>
+                        <a-entity id="map-marias_pass"   map-site-card="index: 3; title: Marias Pass; site: marias_pass; distance: 10.8km"></a-entity>
+                        <a-entity id="map-murray_buttes" map-site-card="index: 4; title: Murray Buttes; site: murray_buttes; distance: 14.1km"></a-entity>
+                        <a-entity id="map-live_site"     map-site-card="index: 5; title: Current Location; site: live_site;"></a-entity>
+                    </a-entity>
+
+                </a-entity>
+            </a-entity>
+
+            <a-entity id="info-card" info-card visible="false"></a-entity>
+
+            <a-entity id="orientation-card" orientation-card="title: How To Access Mars:;" visible="false">
+                <a-entity id="orientation-back-meshes"></a-entity>
+                <a-entity orientation-card-column="title: Learn;  img: intro1; text: Learn about the Curiosity mission by clicking points of interest and highlighted rover parts."></a-entity>
+                <a-entity orientation-card-column="title: Move;   img: intro2; text: Move from point to point by clicking on the terrain."></a-entity>
+                <a-entity orientation-card-column="title: Travel; img: intro3; text: Travel to different mission sites by clicking the map icon."></a-entity>
+            </a-entity>
+
+            <a-entity id="controller-dot" controller-dot></a-entity>
+            <a-entity id="controller-arc" controller-arc></a-entity>
+            <a-entity id="controller-parabola" controller-parabola></a-entity>
+
+        </a-scene>
+
+		<div id="fallback">
+			<div id="text"> Oops. Sorry for the tech trouble. Try <a href="https://www.google.com/chrome/browser/">Chrome Browser</a> instead. </div>
+		</div>
+
+		<div id="exitButton"></div>
+
+    </body>
+
+</html>

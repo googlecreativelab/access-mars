@@ -1,0 +1,59 @@
+{
+  "name": "access-mars",
+  "version": "0.0.1",
+  "description": "",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "npm run build-css && npm run budo",
+    "build": "browserify src/js/vr.js > public/js/vr.js",
+    "buildmin": "browserify -g uglifyify src/js/vr.js > public/js/vr.js",
+    "build-css": "node-sass --include-path scss src/scss/main.scss public/css/vr.css",
+    "budo": "budo src/js/vr.js:js/vr.js --dir ./public --live --verbose --port 3002",
+    "discify": "browserify --full-paths src/js/vr.js | discify --open",
+    "build-dev": "( cd node_modules/three && npm run build-uglify ) && ( cd node_modules/aframe && npm run dist )",
+    "deploy-all": "( cd node_modules/three && npm run build-uglify ) && ( cd node_modules/aframe && npm run dist ) && npm run build && gcloud app deploy -q",
+    "deploy": "npm run build-css && npm run build && gcloud app deploy -q"
+  },
+  "dependencies": {
+    "aframe": "googlecreativelab/aframe#v0.6.0c-mod",
+    "aframe-daydream-controller-component": "jeremyabel/aframe-daydream-controller-component",
+    "bezier-easing": "2.0.3",
+    "clone-deep": "^1.0.0",
+    "eventemitter3": "2.0.2",
+    "ios-safe-audio-context": "1.0.1",
+    "promise-polyfill": "6.0.2",
+    "qs": "6.4.0",
+    "screenfull": "^3.3.1",
+    "sono": "^2.1.2",
+    "tween.js": "^16.6.0",
+    "web-audio-player": "1.3.1",
+    "webvr-ui": "^0.10.0",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.0.0",
+    "budo": "^9.4.7",
+    "derequire": "^2.0.3",
+    "discify": "^1.6.0",
+    "node-sass": "^4.5.3"
+  },
+  "keywords": [
+    "vr",
+    "webvr"
+  ],
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  }
+}

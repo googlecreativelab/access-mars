@@ -1,0 +1,146 @@
+
+ul, ol {
+	list-style-type: none;
+	padding: 0;
+}
+
+.splash {
+	z-index: 10;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #e2ceb5;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+.splash header {
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	transform: translate( -50%, -50% );
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	// background-color: #CCC;
+
+}
+
+.splash header .headerPart {
+	margin: 0 0 2vh 0;
+	min-height: 100px;
+	max-height: 700px;
+	height:10vh;
+	width: auto;
+	margin: 10px 20px 0 20px;
+}
+
+.splash header .headers {
+	text-align: center;
+	margin: 15px 0 0 0;
+}
+
+.splash header .headerImage{
+	text-align: center;
+}
+.splash header h3 {
+	letter-spacing: 0.04em;
+	line-height: 1.4;
+	font-weight: 100;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	float:left;
+	max-width: 500px;
+	@media screen and ( max-width: 400px ){
+		font-size: 9px;
+	}
+	@media screen and ( max-height: 550px ){
+		font-size: 9px;
+	}
+}
+
+.splash header h3 span {
+	white-space:nowrap;
+}
+@media screen {
+	.splash {
+		background-image: url("../img/splash/bg-desktop.jpg");
+	}
+}
+
+
+/* thin */
+@media screen and ( max-aspect-ratio: 1/1 ) {
+	.splash {
+		background-image: url("../img/splash/bg-mobile.jpg");
+		background-position: center center;
+	}
+
+	.splash header {
+		top: 38%;
+	}
+
+	.splash header .headers {
+		min-width: 500px;
+	}
+
+	.splash header .headerPart {
+		min-height: 50px;
+		max-height: 90px;
+		height:9vh;
+		width: auto;
+	}
+
+}
+
+/* squarish */
+@media screen and ( min-aspect-ratio: 1/1 ) and ( max-width: 600px ){
+	.splash {
+		background-image: url("../img/splash/bg-mobile.jpg");
+	}
+
+}
+
+/* regular desktop */
+@media screen and ( min-aspect-ratio: 1/1 ) and ( min-width: 1080px ){
+	.splash {
+		background-image: url("../img/splash/bg-desktop.jpg");
+	}
+
+	.splash header .headerPart {
+		min-height: 50px;
+		max-height: 120px;
+		height:16vh;
+		width: auto;
+	}
+
+}
+
+/* short */
+@media screen and ( max-height: 550px ){
+	.splash {
+		background-image: url("../img/splash/bg-desktop-wide.jpg");
+		background-position: center center;
+	}
+
+	.splash header .headers {
+		min-width: 800px;
+	}
+
+	.splash header .headerImage{
+		text-align: center;
+		width: 800px;
+	}
+
+	.splash header .headerPart {
+		min-height: 40px;
+		max-height: 40px;
+		height:1.5vh;
+		width: auto;
+		margin: 10px 10px 0 10px;
+	}
+
+}
