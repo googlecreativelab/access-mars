@@ -1,6 +1,8 @@
 # Access Mars
 [Access Mars](https://accessmars.withgoogle.com) is a collaboration between NASA, Jet Propulsion Lab, and Google Creative Lab to bring the real surface of Mars to your browser. It is an open source project released as a [WebVR Experiment](http://webvrexperiments.com).
 
+![alt text](https://accessmars.withgoogle.com/img/fbshare.jpg "Access Mars")
+
 ### Background
 The Curiosity rover has been on the surface of Mars for over five years. In that time, it has sent over 200,000 photos back to Earth. Using these photos, engineers at JPL have reconstructed the 3D surface of Mars for their scientists to use as a mission planning tool – surveying the terrain and identifying geologically significant areas for Curiosity to investigate further. And now you can explore the same Martian surface in your browser in an immersive WebVR experience.
 
