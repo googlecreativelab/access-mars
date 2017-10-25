@@ -3,6 +3,8 @@
 
 ![alt text](https://accessmars.withgoogle.com/img/fbshare.jpg "Access Mars")
 
+This is an experiment, not an official Google product. We will do our best to support and maintain this experiment but your mileage may vary.
+
 ### Background
 The Curiosity rover has been on the surface of Mars for over five years. In that time, it has sent over 200,000 photos back to Earth. Using these photos, engineers at JPL have reconstructed the 3D surface of Mars for their scientists to use as a mission planning tool – surveying the terrain and identifying geologically significant areas for Curiosity to investigate further. And now you can explore the same Martian surface in your browser in an immersive WebVR experience.
 
@@ -32,10 +34,9 @@ Install node and browserify if you haven't already `npm install`
 Running `npm run start` will spin up a local Budo server for development. The URL will be given in the terminal.
 
 ### Contributors
-
+This is not an official Google product, but an experiment that was a collaborative effort by friends from [NASA JPL Ops Lab](https://opslab.jpl.nasa.gov/) and Creative Lab.
 * [Jeremy Abel](https://github.com/jeremyabel)
 * [Manny Tan](https://github.com/mannytan)
 * [Ryan Burke](https://github.com/ryburke)
 * [Kelly Ann Lum](https://github.com/kellyannl)
 * [Alex Menzies](https://github.com/amenzies)
-* Our good friends at [NASA JPL Ops Lab](https://opslab.jpl.nasa.gov/)
